@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import Person from './Person';
 import InputForm from './InputForm';
-import {Heading} from './InputFormStyled';
+import {Heading, People} from './InputFormStyled';
 
 const InputList = () => {
   const [list, setList] = useState([
@@ -27,11 +27,11 @@ const InputList = () => {
       <div className='inputList'>
         <InputForm addToList={addToList} />
       </div>
-      <div className='people'>
+      <People>
         {list.map(item => {
           return <Person item={item} key={item.id} />;
         })}
-      </div>
+      </People>
     </div>
   );
 };
