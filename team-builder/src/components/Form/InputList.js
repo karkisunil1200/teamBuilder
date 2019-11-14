@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import Person from './Person';
 import InputForm from './InputForm';
+import {Heading} from './InputFormStyled';
 
 const InputList = () => {
   const [list, setList] = useState([
@@ -22,13 +23,15 @@ const InputList = () => {
   };
   return (
     <div>
-      <h1 className='heading'>Welcome to InputList</h1>
+      <Heading>Welcome to InputList</Heading>
       <div className='inputList'>
         <InputForm addToList={addToList} />
       </div>
-      {list.map(item => {
-        return <Person item={item} key={item.id} />;
-      })}
+      <div className='people'>
+        {list.map(item => {
+          return <Person item={item} key={item.id} />;
+        })}
+      </div>
     </div>
   );
 };
