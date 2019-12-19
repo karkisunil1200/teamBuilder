@@ -15,4 +15,6 @@ export const People = styled.div`
 export const Item = styled.div`
   box-shadow: 0 0px 10px #ccc;
   padding: 20px;
+  margin: 10px;
+  background: white;
 `;
